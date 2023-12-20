@@ -1,9 +1,9 @@
+""" This code doesn't work with Python 3, only PyPy """
 import re
 
-T = int(input())
-for _ in range(T):
+res = [input() for _ in range(int(input()))]
+for _ in res:
     try:
-        re.search(input(), "qwertyuiop[]asdfghjkl;'#zxcvbnm,./+=_-")
-        print(True)
+        print(bool(re.compile(_)))
     except re.error:
         print(False)

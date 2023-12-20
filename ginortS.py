@@ -1,0 +1,6 @@
+S = input()
+lwr = sorted([_ for _ in S if all([_ == _.lower(), _.isalpha()])])
+upr = sorted([_ for _ in S if all([_ == _.upper(), _.isalpha()])])
+evens = sorted([str(_) for _ in [int(_) for _ in S if _.isdigit()] if _ % 2 == 0])
+odds = sorted([str(_) for _ in [int(_) for _ in S if _.isdigit()] if _ % 2 == 1])
+print("".join(lwr + upr + odds + evens))
